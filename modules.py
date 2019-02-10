@@ -10,8 +10,19 @@ from time import time
 # Pip module
 from camelcase import CamelCase  # pipenv install camelcase
 
+# Import custpm module
+import validator
+from validator import validate_email
+
+
 c = CamelCase()
-print (c.hump('hello there world'))
+# print (c.hump('hello there world'))
+
+email = 'test#test.com'
+if validate_email(email):
+    print('Email is valid')
+else:
+    print('Email is bad')
 
 today = date.today()
 # today = datetime.date.today()
